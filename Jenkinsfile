@@ -14,6 +14,7 @@ pipeline {
 
         stage("Build"){
             steps {
+                echo 'Building the project...'
                 sh "mvn clean package"
             }
 
@@ -21,6 +22,7 @@ pipeline {
 
        stage("Test"){
            steps {
+                 echo 'Running tests...'
                  sh "mvn test"
            }
        }
