@@ -4,15 +4,7 @@ pipeline {
         jdk 'Java17'
         maven 'Maven3'
     }
-    environment {
-	    APP_NAME = "SIT653_62HD"
-            RELEASE = "1.0.0"
-            DOCKER_USER = "dushyantsapre"
-            DOCKER_PASS = 'dockerhub'
-            IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
-            IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
-	    JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
-    }
+   
     stages{
         stage("Checkout from SCM"){
                 steps {
