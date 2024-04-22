@@ -32,6 +32,7 @@ pipeline {
 	       script {
 		    withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
 		    sh "mvn sonar:sonar"
+		    waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
 		    }
 		}	
 	    }
