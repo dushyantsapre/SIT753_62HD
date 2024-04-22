@@ -28,13 +28,13 @@ pipeline {
        }
 
        stage("Code Quality Analysis"){
-		   steps {
-			   script {
-				withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
-				sh "mvn sonar:sonar"
-				}
-			   }	
-		   }
+	   steps {
+	       script {
+		    withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
+		    sh "mvn sonar:sonar"
+		    }
+		}	
+	    }
 	}
     }
 }
