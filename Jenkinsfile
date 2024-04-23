@@ -14,6 +14,12 @@ pipeline {
 	    JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
     }
     stages{
+	stage("Cleanup Workspace"){
+	 	steps {
+                    cleanWs()
+                }
+	}
+	
         stage("Checkout from SCM"){
                 steps {
                     git branch: 'main', credentialsId: 'github', url: 'https://github.com/dushyantsapre/SIT753_62HD'
