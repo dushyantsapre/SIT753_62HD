@@ -1,6 +1,6 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>New user Register for DevOps Learning at Virtual TechBox Youtube Channel</h1>
+    <h1>New User Registeration</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
      
@@ -9,7 +9,7 @@
     <br>
     
     <label for="mobile"><b>Enter mobile</b></label>
-    <input type="text" placeholder="Enter moible number" name="mobile" id="mobile" required>
+    <input type="text" placeholder="Enter mobile number" name="mobile" id="mobile" required>
     <br>
 
     <label for="email"><b>Enter Email</b></label>
