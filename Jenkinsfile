@@ -11,7 +11,7 @@ pipeline {
             DOCKER_PASS = 'dockerhub'
             IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
             IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
-	    // JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
+	    JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
     }
     stages{
 	stage("Cleanup Workspace"){
@@ -85,5 +85,17 @@ pipeline {
                 }
             }
        }
+	post {
+           failure {
+                 emailext body: '''${SCRIPT, template="groovy-html.template"}''', 
+                          subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Failed", 
+                          mimeType: 'text/html',to: "dushyant.sapre1981@gmail.com"
+          }
+          success {
+                emailext body: '''${SCRIPT, template="groovy-html.template"}''', 
+                         subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
+                         mimeType: 'text/html',to: "dushyant.sapre1981@gmail.com"
+          }      
+        }
     }
 }
