@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sit653-62hd-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sit653-62hd
+  template:
+    metadata:
+      labels:
+        app: sit653-62hd
+    spec:
+      containers:
+        - name: sit653-62hd
+          image: dushyantsapre1981/sit653_62hd:1.0.0-17
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
