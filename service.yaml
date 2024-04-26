@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sit653-62hd-service
+  labels:
+    app: sit653-62hd
+spec:
+  selector:
+    app: sit653-62hd
+
+  ports:
+    - port: 8080
+      targetPort: 8080
+
+  type: LoadBalancer
