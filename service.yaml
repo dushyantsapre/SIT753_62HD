@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: sit653-62hd-service
   labels:
-    app: sit653-62hd
+    app: sit753-62hd
 spec:
   selector:
-    app: sit653-62hd
+    app: sit753-62hd
 
   ports:
     - port: 8080
