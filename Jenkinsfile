@@ -70,7 +70,7 @@ pipeline {
 	stage("Trivy Scan & Cleanup Artifacts") {
            steps {
                script {
-	            sh ('docker run -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image dushyantsapre1981/sit653_62hd:latest --no-progress --scanners vuln  --exit-code 0 --severity HIGH,CRITICAL --format table')
+	            sh ('docker run -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image dushyantsapre1981/sit753_62hd:latest --no-progress --scanners vuln  --exit-code 0 --severity HIGH,CRITICAL --format table')
                }
 	       script {
                     sh "docker rmi ${IMAGE_NAME}:${IMAGE_TAG}"
