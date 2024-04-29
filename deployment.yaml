@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: sit753-62hd
-          image: dushyantsapre1981/sit753_62hd:1.0.0-10
+          image: dushyantsapre1981/sit753_62hd:1.0.0-12
           resources:
             limits:
               memory: "256Mi"
