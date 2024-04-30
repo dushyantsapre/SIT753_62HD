@@ -34,6 +34,6 @@
 
    <h1> Thank you again.</h1>
    <br>
-   <h1> Demo of CI/CD pipeline using Jenkins, ArgoCD, Maven, & SonarQube and deploying it on AWS EC2.</h1>
+   <h1> Demo of CI/CD pipeline using Jenkins, ArgoCD, Maven, & SonarQube and deploying it on AWS EC2</h1>
    
 </form>
