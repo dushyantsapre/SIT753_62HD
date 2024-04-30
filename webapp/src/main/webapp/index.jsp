@@ -2,7 +2,7 @@
   <div class="container">
     
     <h1>New User Registration</h1>
-    <p>Build Number:  <%= application.getAttribute("BUILD_NUMBER") %> </p>
+    <p>Build Number:  <%= request.getAttribute("BUILD_NUMBER") %> </p>
     <p>Please fill in this form to create an account.</p>
     <hr>
      
