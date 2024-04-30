@@ -2,7 +2,8 @@
   <div class="container">
     
     <h1>New User Registration</h1>
-    <p>Build Number:  <%= request.getAttribute("BUILD_NUMBER") %> </p>
+    <%@ taglib uri="/lib/jenkins" prefix="j" %>
+    <p>Build Number: <j:buildNumber /> </p>
     <p>Please fill in this form to create an account.</p>
     <hr>
      
