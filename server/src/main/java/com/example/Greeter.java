@@ -21,7 +21,7 @@ public class Greeter {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String imageTag = System.getenv("IMAGE_TAG");
         request.setAttribute("IMAGE TAG", IMAGE_TAG);
-        request.getRequestDispatcher("/webapp/src/main/webapp/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/src/main/webapp/index.jsp").forward(request, response);
     }
   }
 }
