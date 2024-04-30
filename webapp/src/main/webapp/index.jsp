@@ -1,6 +1,7 @@
 <form action="action_page.php">
   <div class="container">
     <h1>New User Registration</h1>
+    <h2>IMAGE TAG: ${imageTag}</h2>
     <p>Please fill in this form to create an account. That's it.</p>
     <hr>
      

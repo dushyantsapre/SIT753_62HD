@@ -5,13 +5,13 @@ pipeline {
         maven 'Maven3'
     }
      environment {
-	    APP_NAME = "sit753_62hd"
+	        APP_NAME = "sit753_62hd"
             RELEASE = "1.0.0"
             DOCKER_USER = "dushyantsapre1981"
             DOCKER_PASS = 'jenkins-dockerhub'
             IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
             IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
-	    JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
+	        JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
     }
     stages{
 	stage("Cleanup Workspace"){
