@@ -17,7 +17,6 @@ public class Greeter {
     return String.format("Hello, %s!", someone);
   }
 
-  @WebServlet("/register")
   public class RegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String imageTag = System.getenv("IMAGE_TAG");
