@@ -1,7 +1,9 @@
 <form action="action_page.php">
   <div class="container">
+    
     <h1>New User Registration</h1>
-    <p>Please fill in this form to create an account. That's it.</p>
+    <p>Build Number:  <%= application.getAttribute("BUILD_NUMBER") %> </p>
+    <p>Please fill in this form to create an account.</p>
     <hr>
      
     <label for="Name"><b>Enter Name</b></label>
